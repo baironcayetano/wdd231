@@ -21,7 +21,7 @@ function RenderList(list){
         if(course.title === "Frontend Web Development I"){
             status = "current-course";
         }
-        content += `<li>${course.title} <span class="class-status ${status}">(${status})</span></li>`;
+        content += `<li class="class ${status}">${course.title} (${status})</li>`;
     });
 
     coursesContainer.innerHTML = content;

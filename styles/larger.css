@@ -21,6 +21,7 @@
     }
 
     main{
+        padding: 10px;
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         align-items: start;
@@ -41,6 +42,7 @@
     }   
 
     .certificate-courses{
+        margin: 0 40px;
         grid-column: span 6;
         display: grid;
         grid-template-columns: repeat(3,1fr);

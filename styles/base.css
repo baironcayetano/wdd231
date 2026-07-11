@@ -125,19 +125,28 @@ main h1{
 }
 
 #courses{
-    width: 100%;
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin: 0 40px;
+    flex-direction: column;
     font-size: 18px;
+    margin: 0px;
+    padding: 0px;
 }
 
 #courses li{
-    width: 100%;
+    padding: 10px;
 }
 
-#courses li .class-status.completed{
-    color:green;
+#courses li.class.completed{
+    border: 1px solid green;
+    color: black;
+    font-weight: bold;
 }
 
-#courses li .class-status.current-course{
+#courses li.class.current-course{
+    border: 1px solid #ddd;
     color:black;
     font-weight: bold;
 }
