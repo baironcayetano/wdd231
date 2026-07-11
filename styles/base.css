@@ -17,6 +17,7 @@ header img{
 header span{
     font-size: 1.2rem;
     color:#3D405B;
+    font-family: "Playwrite GB J", cursive;
 }
 
 /*** HAMBURGER Navigation ***/
@@ -51,6 +52,8 @@ header span{
     margin:0;
     padding: 0;
     list-style-type: none;
+    font-family: "Playwrite GB J", cursive;
+    font-size: 16px;
     display: flex;
 }
 
@@ -69,6 +72,87 @@ li a{
     text-decoration: none;
     color:#3D405B;
 }
+
+/** MAIN **/
+main{
+    margin: 0 40px;
+    display: block;
+    padding-bottom: 20px;
+}
+
+main h1{
+    margin-bottom: 5px;
+}
+
+.student-photo picture{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.student-photo picture img{
+    max-width: 100%;
+    height: auto;
+}
+
+.certificate-courses{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.certificate-courses button{
+    border: 1px solid #ddd;
+    background-color: white;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.certificate-courses button:hover{
+    background-color: whitesmoke;
+}
+
+.certificate-courses button.active{
+    background-color: black;
+    color: white;
+}
+
+.certificate-courses span{
+    width: 100%;
+    text-align: center;
+}
+
+#courses{
+    width: 100%;
+    font-size: 18px;
+}
+
+#courses li{
+    width: 100%;
+}
+
+#courses li .class-status.completed{
+    color:green;
+}
+
+#courses li .class-status.current-course{
+    color:black;
+    font-weight: bold;
+}
+
+main section p{
+    padding: 10px;
+    background-color: whitesmoke;
+}
+
+main section h2{
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
 
 /** FOOTER **/
 footer{
@@ -113,3 +197,15 @@ footer{
     justify-content: center;
     gap: 10px;
 }
+
+.site-info{
+    background-color: whitesmoke;
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
+
+.site-info p{
+    text-align: center;
+}
+

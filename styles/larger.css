@@ -19,4 +19,43 @@
     .social-media ul{
         width: 60%;
     }
+
+    main{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        align-items: start;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    main h1{
+        grid-column: span 6;
+    }
+
+    .about-me{
+        grid-column: span 4;
+    }
+
+    .student-photo{
+      grid-column: span 2;
+    }   
+
+    .certificate-courses{
+        grid-column: span 6;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }      
+
+    .certificate-courses h2, .certificate-courses span{
+        text-align: center;
+        grid-column: span 3;
+    }
+
+    #courses{
+        grid-column: span 3;
+    }
+
 }

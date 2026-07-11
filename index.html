@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Bairon Cayetano">
-    <meta name="description" content="This website has been created to practice using HTML, CSS AND JS">
+    <meta name="description" content="This website has been by Bairon Cayetano to show all the future projects for the class WDD231">
     
+    <!-- Fonts --->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Playwrite+GB+J:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
+
     <!-- Styles --->
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/base.css">
@@ -13,6 +18,8 @@
 
     <!--Scripts-->
     <script src="./scripts/navigation.js" defer></script>
+    <script src="./scripts/filter-course.js" type="module"></script>
+    <script src="./scripts/footer.js" defer></script>
 
     <title>WDD231 - Bairon Cayetano</title>
 </head>
@@ -24,12 +31,41 @@
     </header>
     <nav id="nav-bar" class="navigation">
         <ul>
-            <li class="current"><a href="#">News & Events</a></li>
-            <li><a href="#">Dedicated Temples</a></li>
-            <li><a href="#">Announced Temples</a></li>
+            <li class="current"><a href="#">Home</a></li>
+            <li><a href="./week02/index.html">Chamber Project</a></li>
+            <li><a href="./final-project/index.html">Final Project</a></li>
         </ul>
     </nav>
-    <main></main>
+    <main>
+        <h1>Home</h1>
+        <section class="about-me">
+            <h2>About me</h2>
+            <p>Hello! My name is Bairon Spenser Cayetano and I am from Honduras.
+                I like listening to music and learning programming. I am 21 years old
+                and I am interested in web frontend and backend development. In five years,
+                I see myself as a software engineer developing software that improves life quality
+                in Central America.
+            </p>
+        </section>
+        <section class="student-photo">
+            <h2>Student Photo</h2>
+            <picture>
+                <source media="(min-width:1024px)" srcset="./images/profile-large.webp">
+                <source media="(min-width:720px)" srcset="./images/profile-medium.webp">
+                <img src="./images/profile.webp" alt="student photo" loading="lazy">
+            </picture>
+        </section>
+        <section class="certificate-courses" aria-label="link to web certificate courses">
+            <h2>Web Certificate Courses</h2>
+            <button type="button" id="all-courses" class="course-button">All Courses</button>
+            <button type="button" id="cse-courses" class="course-button">CSE Courses</button>
+            <button type="button" id="wdd-courses" class="course-button">WDD Courses</button>
+            <span>Total credits for course listed above is: <strong id="credits"></strong></span>
+            <ul class="courses" id="courses">
+            </ul>
+        </section>
+    </main>
+
     <footer>
         <div class="social-media">
             <span>Contact Information</span>
@@ -53,6 +89,10 @@
                     </a>
                 </li>
             </ul>
+        </div>
+        <div class="site-info">
+            <p>&copy; <span id="currentYear"></span> - Bairon Cayetano | Tegucigalpa, Honduras</p>
+            <p><strong>Last Modification:</strong> <span id="lastModified"></span></p>
         </div>
     </footer>
 </body>
