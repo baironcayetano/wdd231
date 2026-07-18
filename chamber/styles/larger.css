@@ -11,8 +11,9 @@
     }
     
     .header-title{
+        padding: 0px;
         font-size: 20px;
-         justify-content: start; 
+        justify-content: start; 
     }
 
     .hamburger{
@@ -35,6 +36,26 @@
     nav ul li.active a{
         text-decoration: underline;
         color: crimson;
+    }
+
+    #nav-bar, #nav-bar.show{
+        display: block;
+    }
+
+    /** FOOTER **/
+    footer{
+        padding: 20px 60px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .social-media {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    footer div span{
+        text-align: center;
     }
 
 

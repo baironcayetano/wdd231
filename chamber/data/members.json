@@ -1,0 +1,68 @@
+{
+  "companies":[
+    {
+        "company_name":"Apex Cybernetics",
+        "address":"Bulevard Morazan, Tegucigalpa, Honduras",
+        "email":"servicio@apexcybernetics.hn",
+        "phone_number":"+504 3300-3300",
+        "website_url":"https://www.apexcybernetics.io",
+        "image_url":"./images/apex-cybernetics.webp",
+        "international":false,
+        "membership_level":1
+    },{
+        "company_name":"Nova Logistics",
+        "address":"Bulevard Centro America, Tegucigalpa, Honduras",
+        "email":"servicio@novalogistics.hn",
+        "phone_number":"+504 0000-0000",
+        "website_url":"https://www.novalogistics.hn",
+        "image_url":"./images/nova-logistics.webp",
+        "international":true,
+        "membership_level":3
+    },{
+        "company_name":"Puma Logistics",
+        "address":"Bulevard Suyapa, Tegucigalpa, Honduras",
+        "email":"servicio@pumalogistics.hn",
+        "phone_number":"+504 0203-3010",
+        "website_url":"https://www.pumalogistics.hn",
+        "image_url":"./images/puma-logistics.webp",
+        "international":true,
+        "membership_level":3
+    },{
+        "company_name":"Betzabe Store",
+        "address":"Col. Monterrey, Comayaguela, Honduras",
+        "email":"servicio@betzastore.hn",
+        "phone_number":"+504 0213-3310",
+        "website_url":"https://www.betzastrore.hn",
+        "image_url":"./images/betzabe-store.webp",
+        "international":false,
+        "membership_level":1
+    },{
+        "company_name":"Vortex Soluciones",
+        "address":"Parque Central, Tegucigalpa, Honduras",
+        "email":"servicio@vortexsoluciones.hn",
+        "phone_number":"+504 0123-5010",
+        "website_url":"https://www.vortexsolutiones.hn",
+        "image_url":"./images/vortex-solutiones.webp",
+        "international":true,
+        "membership_level":2
+    },{
+        "company_name":"Parque Medico Central",
+        "address":"Bulevard Suyapa, Tegucigalpa, Honduras",
+        "email":"servicio@parquemedicocentralhonduras.hn",
+        "phone_number":"+504 4444-3312",
+        "website_url":"https://www.parquemedicocentral.hn",
+        "image_url":"./images/parque-medico-central.webp",
+        "international":false,
+        "membership_level":3
+    },{
+        "company_name":"L-gante store",
+        "address":"Bulevard Kuwait, Tegucigalpa, Honduras",
+        "email":"servicio@lgantestore.hn",
+        "phone_number":"+504 2222-2121",
+        "website_url":"https://www.lgantestore.hn",
+        "image_url":"./images/l-gante-store.webp",
+        "international":false,
+        "membership_level":1
+    }
+  ]  
+}
