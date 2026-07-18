@@ -1,5 +1,7 @@
 const cards = document.getElementById("cards");
 const membersUrl = "https://baironcayetano.github.io/wdd231/chamber/data/members.json";
+const gridViewButton = document.getElementById("gridView");
+const listViewButton = document.getElementById("listView");
 
 //returns level of membership
 function getLevel(level){
@@ -29,7 +31,7 @@ function card(member,id){
     leftContainer.classList.add("card-left-container");
     rightContainer.classList.add("card-right-container");
 
-    let title = document.createElement("h3");
+    let title = document.createElement("h2");
         title.textContent = member.company_name;  
 
     let membershipLvl = document.createElement("span");
@@ -43,9 +45,9 @@ function card(member,id){
     let companyImage = document.createElement("img");
         companyImage.src = member.image_url;
         companyImage.setAttribute("alt", `Company logo of ${member.company_name}`);
-        portrait.setAttribute("loading","lazy");
-        portrait.setAttribute("width",'340');
-        portrait.setAttribute("height",'440');
+        companyImage.setAttribute("loading","lazy");
+        companyImage.setAttribute("width",'340');
+        companyImage.setAttribute("height",'440');
 
     leftContainer.appendChild(companyImage);
 
@@ -85,17 +87,17 @@ function card(member,id){
         websiteStrong.textContent = "Website";
         websiteLink.textContent = member.website_url;
         websiteLink.href = member.website_url;
-        phoneContainer.appendChild(phoneStrong);
-        phoneContainer.appendChild(websiteLink);
+        websiteContainer.appendChild(websiteStrong);
+        websiteContainer.appendChild(websiteLink);
 
      //International
     let internationalContainer = document.createElement("p");
-    let intrenationalStrong = document.createElement("strong");
+    let internationalStrong = document.createElement("strong");
     let internationalSpan = document.createElement("span");
         internationalStrong.textContent = "International";
-        interantionalSpan.textContent = member.international ? "Yes" : "No";
+        internationalSpan.textContent = member.international ? "Yes" : "No";
         internationalContainer.appendChild(internationalStrong);
-        internationalContainer.appendChild(interantionalSpan);
+        internationalContainer.appendChild(internationalSpan);
 
     rightContainer.appendChild(addressContainer);
     rightContainer.appendChild(emailContainer);
@@ -129,6 +131,26 @@ async function getMembers(){
     let data = await response.json();
     displayMembers(data.companies);
 }
+
+//Changes View Style
+function changeViewStyle(grid){
+
+    if(grid){
+        cards.classList.remove("cards-list");
+        cards.classList.add("cards-grid");
+        gridViewButton.classList.add("active");
+        listViewButton.classList.remove("active");
+        return;
+    }
+    
+    cards.classList.remove("cards-grid");
+    cards.classList.add("cards-list");
+    gridViewButton.classList.remove("active");
+    listViewButton.classList.add("active");
+}
+
+gridViewButton.addEventListener("click",()=>changeViewStyle(true));
+listViewButton.addEventListener("click",()=>changeViewStyle(false));
 
 getMembers();
 

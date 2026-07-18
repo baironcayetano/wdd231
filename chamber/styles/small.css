@@ -121,9 +121,89 @@ nav ul li a{
     color: white;
 }
 
+/** VIEW STYLES **/
+.cards-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+    grid-gap: 0.5rem; 
+    gap: 0.5rem; /** For browsers where grid-gap is not supported **/
+}
+
+.cards-list{
+    display: block;
+}
+
+.cards-list > .card{
+    margin: 20px 0;
+}
+
+.card{
+    border: 1px solid #ddd;
+    box-shadow: 0 5px 5px #ddd;
+    width: auto;
+    min-width: 320px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    align-items: center;
+    justify-content: center;
+    grid-gap: 10px;
+    gap: 10px; /** For browsers where grid-gap is not supported **/
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.card > .card-header{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    grid-column: span 2;
+    width: 100%;
+    text-align: center;
+}
+
+.card-header > .membership-member,
+.card-header > .membership-silver,
+.card-header > .membership-gold {
+    text-align:center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: black;
+    color: white;
+}
+
+.card > .card-left-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card > .card-left-container > img{
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+}
+
+.card > .card-right-container{
+    width: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.card-right-container > p{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-right-container > p > a{
+    text-decoration: none;
+    color:crimson;
+}
+
 
 /** Footer **/
 footer{
+    margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     padding: 15px;
