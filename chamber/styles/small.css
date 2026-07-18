@@ -1,0 +1,90 @@
+body{
+    margin: 0 20px;
+}
+
+/** HEADER **/
+header{
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-title{
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;  
+    gap: 10px;
+}
+
+.header-title img{
+    width: 36px;
+    height: auto;
+}
+
+nav{
+   border-top: 1px solid #ddd;
+   margin-top: 10px;
+   width: 100%; 
+}
+
+nav ul{
+    font-size: 18px;
+    list-style: none;
+    margin-block: 0px;
+    padding-inline-start: 0px;
+}
+
+nav ul li{
+    padding: 10px;
+    text-align: center;
+}
+
+/** BACKGROUND COLOR FOR HOVER **/
+nav ul li:hover{
+    cursor: pointer;
+    background-color: whitesmoke;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+#nav-bar{
+    display: none;
+}
+
+#nav-bar.show{
+    display: block;
+}
+
+/** HAMBURGER BUTTON**/
+.hamburger{
+    background: none;
+    border:none;
+    color:#3D405B;
+    cursor:pointer;
+}
+
+.hamburger::after{
+    content:"\2630";
+    font-size:2rem;
+}
+
+.hamburger.show::after{
+    content:"\00D7";
+}
+
+
+/** USING GOOGLE FONT Playfair Display IN ALL THE TEXT ELEMENTS **/
+h1,h2,h3,p,li,a,span{
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}

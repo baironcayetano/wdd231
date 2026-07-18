@@ -1,0 +1,41 @@
+@media only screen and (min-width:48rem){
+
+    body{
+        margin: 0 40px;
+    }
+
+    /** HEADER **/
+    header{
+        padding: 10px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .header-title{
+        font-size: 20px;
+         justify-content: start; 
+    }
+
+    .hamburger{
+        display: none;
+    }
+    
+    nav{
+        border-top: 0px;
+        margin-top: 0px;
+    }
+
+    nav ul{
+        font-size: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    nav ul li.active a{
+        text-decoration: underline;
+        color: crimson;
+    }
+
+
+}
