@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Icon-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!--General Metadata--->
+    <meta name="author" content="Bairon Spenser Cayetano">
+    <meta name="description" content="This page contains some attention grabbing information along with community information, weather, calls to action, and business spotlights.">
+
+    <!-- Open Graph (OG) Metadata--->
+    <meta property="og:title" content="Home | Tegucigalpa Chamber of Commerce">
+    <meta property="og:description" content="This page contains some attention grabbing information along with community information, weather, calls to action, and business spotlights.">
+    <meta property="og:image" content="https://baironcayetano.github.io/wdd231/chamber/images/home-meta-image.webp">
+    <meta property="og:url" content="https://baironcayetano.github.io/wdd231/chamber/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Tegucigalpa Chamber of Commerce">
+
+    <!-- Twitter (X) Metadata -->
+    <meta name="twitter:url" content="https://baironcayetano.github.io/wdd231/chamber/index.html">
+    <meta name="twitter:title" content="Home | Tegucigalpa Chamber of Commmerce">
+    <meta name="twitter:description" content="This page contains some attention grabbing information along with community information, weather, calls to action, and business spotlights.">
+    <meta name="twitter:image" content="https://baironcayetano.github.io/wdd231/chamber/images/home-meta-image.webp">
+    <meta name="twitter:card" content="summary">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Playfair+Display:ital@0;1&family=Playwrite+GB+J:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/small.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+
+    <!--Scripts-->
+    <script src="./scripts/navigation.js" defer></script>
+    <script src="./scripts/footer.js" defer></script>
+
+    <title>Home | Tegucigalpa Chamber of Commerce</title>
+</head>
+<body>
+    <header>
+        <div class="header-title">
+            <img src="./images/nav-icon.svg" alt="site logo" width="512" height="512">
+            <span>Tegucigalpa Chamber of Commerce</span>
+            <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+        </div>
+        <nav id="nav-bar">
+            <ul>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="./directory.html">Directory</a></li>
+                <li><a href="./join.html">Join</a></li>
+                <li><a href="./discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Home</h1>
+    </main>
+    <footer>
+        <div class="contact-information">
+            <span>Tegucigalpa Chamber of Commerce</span>
+            <p>Tegucigalpa, Central District, Francisco Morazan, Honduras</p>
+            <a href="mailto:spenser.cayetano@gmail.com">spenser.cayetano@gmail.com</a>
+            <a href="tel:+50499999999">(+504) 9999-9999</a>
+        </div>
+        <div class="social-media">
+            <span>Social Media</span>
+            <ul aria-label="social media links">
+                <li>
+                    <a href="https://github.com/baironcayetano">
+                        <img src="./images/github.svg" alt="github logo" width="32" height="32">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/bairon-spenser-c-a97009250">
+                        <img src="./images/linkedin.svg" alt="linkedin logo" width="32" height="32">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/spenser.cayetano25">
+                        <img src="./images/facebook.svg" alt="facebook logo" width="32" height="32">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="class-information">
+            <strong>WDD231 Class Project</strong>
+            <span>Bairon Cayetano</span>
+            <p>&copy; <span id="currentYear"></span> Tegucigalpa Chamber of Commerce</p>
+            <p>Last modification: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -33,9 +33,12 @@
         justify-content: space-evenly;
     }
 
-    nav ul li.active a{
-        text-decoration: underline;
-        color: crimson;
+    nav ul li{
+        margin-bottom: 0;
+    }
+
+    nav ul li a{
+        width: auto;
     }
 
     #nav-bar, #nav-bar.show{
