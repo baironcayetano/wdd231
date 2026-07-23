@@ -78,16 +78,30 @@ nav ul li a{
     border:none;
     color:#3D405B;
     cursor:pointer;
+    touch-action: manipulation;
+
+    min-width: 44px;
+    min-height: 44px;
+    padding: 8px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
 }
 
 .hamburger::after{
     content:"\2630";
     font-size:2rem;
+    line-height: 1;
 }
 
 .hamburger.show::after{
     content:"\00D7";
 }
+
 
 /** View Style **/
 .view-style{
