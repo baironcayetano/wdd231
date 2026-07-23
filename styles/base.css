@@ -26,6 +26,7 @@ header span{
     border:none;
     color:#3D405B;
     cursor:pointer;
+    touch-action: manipulation;
 }
 
 .hamburger::after{
