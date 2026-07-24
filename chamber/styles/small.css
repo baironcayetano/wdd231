@@ -61,6 +61,8 @@ nav ul li.active{
 
 
 nav ul li a{
+    text-decoration: none;
+    color: black;
     display: block;
     width: 100%;
 }
@@ -75,10 +77,6 @@ nav ul li:hover{
     background-color: whitesmoke;
 }
 
-nav ul li a{
-    text-decoration: none;
-    color: black;
-}
 
 #nav-bar{
     display: none;
