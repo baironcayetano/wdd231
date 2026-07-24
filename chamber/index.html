@@ -38,6 +38,7 @@
 
     <!--Scripts-->
     <script src="./scripts/navigation.js" defer></script>
+    <script type="module" src="./scripts/home-ui.mjs"></script>
     <script src="./scripts/footer.js" defer></script>
 
     <title>Home | Tegucigalpa Chamber of Commerce</title>
@@ -75,8 +76,15 @@
             </div>
         </section>
         <section id="currentEvents"></section>
-        <section id="weather"></section>
-        <section id="spotlights"></section>
+        <section id="weather">
+            <h2>Weather</h2>
+            <div id="todayWeather" class="card-list"></div>
+            <div id="threeDaysWeather" class="cards-grid"></div>
+        </section>
+        <section id="spotlights">
+            <h2>Featured Members</h2>
+            <div class="cards-grid" id="spotlight-cards"></div>
+        </section>
     </main>
     <footer>
         <div class="contact-information">

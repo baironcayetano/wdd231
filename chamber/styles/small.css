@@ -200,31 +200,33 @@ nav ul li a{
     color: white;
 }
 
-.card > .card-left-container{
-    display: flex;
-    flex-direction: column;
+.card > .card-image{
+    display: inline-flex;
     align-items: center;
     justify-content: center;
 }
 
-.card > .card-left-container > img{
-    width: 150px;
-    height: auto;
+
+.card-image > img{
+    width: 125px;
+    height: 125px;
     object-fit: cover;
 }
 
-.card > .card-right-container{
+.card > .card-content{
+    display: block;
+    box-sizing: border-box;
     width: 100%;
-    word-break: break-word;
-    overflow-wrap: break-word;
 }
 
-.card-right-container > p{
+.card-content > p{
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
+    overflow-wrap:break-word;
 }
 
-.card-right-container > p > a{
+.card-content > p > a{
     text-decoration: none;
     color:crimson;
 }

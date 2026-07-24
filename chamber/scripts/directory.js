@@ -28,8 +28,8 @@ function card(member,id){
     let rightContainer = document.createElement("div");
 
     titleContainer.classList.add("card-header");
-    leftContainer.classList.add("card-left-container");
-    rightContainer.classList.add("card-right-container");
+    leftContainer.classList.add("card-image");
+    rightContainer.classList.add("card-content");
 
     let title = document.createElement("h2");
         title.textContent = member.company_name;  
