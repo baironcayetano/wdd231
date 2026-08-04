@@ -45,6 +45,33 @@
         display: block;
     }
 
+    .double-screen{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .double-screen > h1{
+        grid-column: span 2;
+    }
+
+    .info-cards{
+        height: max-content;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: start;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .info-cards > h2{
+        grid-column: span 3;
+    }
+
+    .info-card{
+        margin: 0px;
+    }
+
     /** FOOTER **/
     footer{
         padding: 20px 60px;

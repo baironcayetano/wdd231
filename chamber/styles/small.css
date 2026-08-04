@@ -299,6 +299,200 @@ nav ul li:hover{
   background-color: #003d80;
 }
 
+/** Forms **/
+form{
+    border: 2px dashed #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+form > fieldset{
+    border: 0px;
+    width: 90%;
+    display: block;
+}
+
+fieldset > legend{
+    font-size: 25px;
+}
+
+fieldset > input, fieldset > label{
+    margin: 10px 0 0 0;
+    height: 25px;
+    width: 100%;
+    display: block;
+    font-size: 20px;
+}
+
+fieldset > select, select > option{
+    width: 100%;
+    padding: 5px;
+    font-size: 20px;
+}
+
+fieldset > textarea {
+    width: 100%;
+    height: auto;
+    max-height: 120px;
+    font-size: 20px;
+}
+
+form > input[type="submit"]{
+    border: 1px solid #ddd;
+    background-color:#ddd;
+    color: black;
+    cursor:not-allowed;
+    padding: 10px;
+    margin-top: 10px;
+    width: 90%;
+}
+
+form:valid > input[type="submit"]{
+    border: 1px solid #111827;
+    background-color:#111827;
+    color: white;
+    cursor: pointer;
+}
+
+/** Modal **/
+dialog {
+  width: 400px;
+  height: 300px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 50%);
+  padding: 20px;
+}
+::backdrop {
+  background-color: rgb(0 0 0 / 50%);
+}
+
+.modal-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding: 0 20px;
+}
+
+#closeModal{
+    background-color: transparent;
+    border: 0px solid;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
+
+.modal-header button{
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.modal-header #modal-title{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+.modal-content > p{
+    padding: 0 10px;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.double-screen{
+    display: block;
+}
+
+.info-cards{
+   display: block;
+}
+
+.info-card{
+    width: 100%;
+    margin-top: 15px;
+    border: 1px solid #ddd;
+    box-shadow: 0 5px 5px #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(15px);
+    animation: cardEntry 0.7s ease-out forwards;
+}
+
+.info-card > button{
+    width: 90%;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.info-cards:nth-child(2) { animation-delay: 0s; }
+.info-cards:nth-child(3) { animation-delay: 0.15s; }
+.info-cards:nth-child(4) { animation-delay: 0.3s; }
+.info-cards:nth-child(5) { animation-delay: 0.45s; }
+
+
+.shining{
+    position: relative;
+    overflow: hidden;
+}
+
+.shining::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent 0%,
+        rgba(236, 236, 236, 0.308) 50%,
+        transparent 100%
+    );
+    translate: -150% 0;
+    transform: skewX(-20deg);
+    animation: shine 2s ease-in-out;
+}
+
+
+.black{
+    border: 1px solid #111827;
+    background-color:#111827;
+    color: white;
+}
+
+.bronze{
+    border: 1px solid saddlebrown;
+    background-color: saddlebrown;
+    color: white;
+}
+
+.silver{
+    border: 1px solid silver;
+    background-color: silver;
+}
+
+.gold{
+    border: 1px solid goldenrod;
+    background-color: goldenrod;
+}
+
+.strong{
+    font-weight: bolder;
+}
 
 /** Footer **/
 footer{
@@ -363,3 +557,14 @@ footer div span{
     height: auto;
 }
 
+
+/** Keyframes **/
+@keyframes cardEntry {
+  from { opacity: 0; transform: translateY(15px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shine {
+  0% { translate: -150% 0; }
+  100% { translate: 250% 0; }
+}
