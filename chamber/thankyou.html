@@ -9,11 +9,11 @@
 
     <!--General Metadata--->
     <meta name="author" content="Bairon Spenser Cayetano">
-    <meta name="description" content="This page contains information about the benefit of joining the chamber and a membership application form">
+    <meta name="description" content="This page contains a review of your membership application">
 
     <!-- Open Graph (OG) Metadata--->
     <meta property="og:title" content="Join Form - Summary | Tegucigalpa's Chamber of Commerce">
-    <meta property="og:description" content="This page contains information about the benefit of joining the chamber and a membership application form">
+    <meta property="og:description" content="This page contains a review of your membership application">
     <meta property="og:image" content="https://baironcayetano.github.io/wdd231/chamber/images/directory-image.webp">
     <meta property="og:url" content="https://baironcayetano.github.io/wdd231/chamber/directory.html">
     <meta property="og:type" content="website">
@@ -22,7 +22,7 @@
     <!-- Twitter (X) Metadata -->
     <meta name="twitter:url" content="https://baironcayetano.github.io/wdd231/chamber/directory.html">
     <meta name="twitter:title" content="Join Form - Summary | Tegucigalpa's Chamber of Commmerce">
-    <meta name="twitter:description" content="This page contains information about the benefit of joining the chamber and a membership application form.">
+    <meta name="twitter:description" content="This page contains a review about your membership application">
     <meta name="twitter:image" content="https://baironcayetano.github.io/wdd231/chamber/images/directory-image.webp">
     <meta name="twitter:card" content="summary">
 
@@ -38,6 +38,7 @@
 
     <!--Scripts-->
     <script src="./scripts/navigation.js" defer></script>
+    <script src="./scripts/thankyou.js" defer></script>
     <script src="./scripts/footer.js" defer></script>
 
     <title>Thank You | Tegucigalpa's Chamber Of Commerce</title>
@@ -60,6 +61,51 @@
     </header>
     <main>
         <h1>Thanks for filling out the form!</h1>
+        <p>You have successfully submitted your application</p>
+        <p class="small">You can review your application in the following table:</p>
+        <table>
+            <caption class="strong">Application:</caption>
+            <thead class="strong">
+                <tr>
+                    <td>Name</td>
+                    <td>Content</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>First Name</td>
+                    <td id="fName"></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td id="lName"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td id="email"></td>
+                </tr>
+                <tr>
+                    <td>Phone Number</td>
+                    <td id="pNumber"></td>
+                </tr>
+                <tr>
+                    <td>Business Name</td>
+                    <td id="bName"></td>
+                </tr>
+                <tr>
+                    <td>Membership Level</td>
+                    <td id="memLvl"></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">This table does not include any optional value. If you are aproved you can edit this information later.</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><strong>Application Submitted At:</strong>  <span id="timestamp"></span></td>
+                </tr>
+            </tfoot>
+        </table>
     </main>
     <footer>
         <div class="contact-information">
