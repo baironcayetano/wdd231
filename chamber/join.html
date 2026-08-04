@@ -63,36 +63,36 @@
         <h1>Join</h1>
          <dialog id="myModal">
             <div class="modal-header shining">
-                <h3 id="modal-title"></h3>          
+                <h2 id="modal-title"></h2>          
                 <button id="closeModal">✖</button>
             </div>
             <div class="modal-content"></div>
         </dialog>
         <section class="form">
-            <form action="./thankyou.html" method="get">
+            <form action="thankyou.html" method="get">
                 <fieldset>
                     <legend>Let's start!</legend>
                     <!--fName-->
                     <label for="fName">*First Name:</label>
-                    <input type="text" name="fname" id="fName" autocomplete="given-name" required>
+                    <input type="text" name="fname" id="fName" autocomplete="given-name" title="Enter your first name. Required" required>
                     <!-- lName--->
                     <label for="lName">*Last Name:</label>
-                    <input type="text" name="lname" id="lName" autocomplete="family-name" required>
+                    <input type="text" name="lname" id="lName" autocomplete="family-name" title="Enter your last name. Required" required>
                     <!--orgTitle-->
                     <label for="orgTitle">Organizational Title:</label>
-                    <input type="text" name="otitle" id="orgTitle" pattern="[a-zA-Z- ]{7,}" autocomplete="organization-title">
+                    <input type="text" name="otitle" id="orgTitle" pattern="[a-zA-Z- ]{7,}" autocomplete="organization-title" title="Enter your organization title. This field is Optional and accepts names without special characters or numbers">
                     <!--email-->
                     <label for="email">*Email:</label>
-                    <input type="email" name="email" id="email" autocomplete="email" placeholder="example@email.com" required>
+                    <input type="email" name="email" id="email" autocomplete="email" placeholder="example@email.com" title="Enter your email adress. Required" required>
                     <!--phoneNumber-->
                     <label for="pNumber">*Phone Number:</label>
-                    <input type="tel" name="tel" id="pNumber" autocomplete="tel" required>
+                    <input type="tel" name="tel" id="pNumber" autocomplete="tel" title="Enter your phone number with its area code. Required" required>
                     <!--bName-->
                     <label for="bName">*Business Name</label>
-                    <input type="text" name="bname" id="bName" autocomplete="organization" required>
+                    <input type="text" name="bname" id="bName" autocomplete="organization" title="Enter your business name. Required" required>
                     <!--memlvl-->
                     <label for="memLvl">Membership Level:</label>
-                    <select name="membership" id="memLvl" required>
+                    <select name="membership" id="memLvl" title="Select your type of membership. Required" required>
                        <option value="" selected disabled> --  select  -- </option>
                        <option value="np">NP</option>
                        <option value="bronze">Bronze</option>
@@ -101,7 +101,7 @@
                     </select>
                     <!--description-->
                     <label for="description">Description:</label>
-                    <textarea name="description" id="description"></textarea>
+                    <textarea name="description" id="description" title="Describe your business. This field is optional."></textarea>
                     <!--form-timestamp-->
                     <input type="hidden" name="timestamp" id="form-timestamp">
                 </fieldset>
