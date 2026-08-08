@@ -9,6 +9,22 @@ h1,h2,h3,p,li,a,span{
   font-style: normal;
 }
 
+/** Global **/
+.text-center {
+    text-align: center;
+}
+
+.pt-10{
+    padding: 10px;
+}
+
+.ms-10{
+    margin: 0 10px;
+}
+
+.mb-10{
+    margin-bottom: 10px;
+}
 
 /** HEADER **/
 header{
@@ -48,17 +64,10 @@ nav ul{
     padding-inline-start: 0px;
 }
 
-nav ul li{
-    padding: 10px;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
 nav ul li.active{
     border: 2px solid crimson;
     border-radius: 5px;
 }
-
 
 nav ul li a{
     text-decoration: none;
@@ -591,12 +600,11 @@ footer div span{
     text-align: center;
 }
 
-.template-card p, .template-card address{
+.template-card p, .template-card address, .template-card button{
     margin: 5px 10px;
 }
 
 .template-card button{
-    margin: 5px 10px;
     background-color: transparent;
     border: 2px solid crimson;
     border-radius: 5px;
