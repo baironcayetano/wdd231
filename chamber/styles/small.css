@@ -558,6 +558,85 @@ footer div span{
 }
 
 /** Grid Template Area **/
+.template-cards{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: start;
+    gap: 10px;
+    grid-template-areas: 
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+}
+
+.template-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:100%;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    box-shadow: 0 5px 5px #ddd;
+    padding: 10px;
+    text-align: justify;
+}
+
+.template-card h2{
+    text-align: center;
+}
+
+.template-card p, .template-card address{
+    margin: 5px 10px;
+}
+
+.template-card button{
+    margin: 5px 10px;
+    background-color: transparent;
+    border: 2px solid crimson;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    color: crimson;
+}
+
+.template-card button:hover{
+    background-color: crimson;
+    color: white;
+}
+
+figure{
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figure img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.template-card:nth-child(1){grid-area: card1;}
+.template-card:nth-child(2){grid-area: card2;}
+.template-card:nth-child(3){grid-area: card3;}
+.template-card:nth-child(4){grid-area: card4;}
+.template-card:nth-child(5){grid-area: card5;}
+.template-card:nth-child(6){grid-area: card6;}
+.template-card:nth-child(7){grid-area: card7;}
+.template-card:nth-child(8){grid-area: card8;}
+
+#visit-message{
+    border: 2px dashed gray;
+    padding: 10px;
+    font-size: 18px;
+}
 
 /** Keyframes **/
 @keyframes cardEntry {
