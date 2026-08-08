@@ -1,3 +1,9 @@
+:root{
+    --border-color:#ddd;
+    --silver:silver;
+    --gold:goldenrod;
+}
+
 body{
     margin: 0 20px;
 }
@@ -33,7 +39,7 @@ header{
     grid-template-columns: repeat(1,1fr);
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .header-title{
@@ -52,7 +58,7 @@ header{
 }
 
 nav{
-   border-top: 1px solid #ddd;
+   border-top: 1px solid var(--border-color);
    margin-top: 10px;
    width: 100%; 
 }
@@ -138,7 +144,7 @@ nav ul li:hover{
 }
 
 .view-style > button{
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     border-radius: 5px;
     background-color: transparent;
     font-size: 28px;
@@ -174,8 +180,8 @@ nav ul li:hover{
 }
 
 .card{
-    border: 1px solid #ddd;
-    box-shadow: 0 5px 5px #ddd;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 5px 5px var(--border-color);
     width: auto;
     min-width: 320px;
     height: auto;
@@ -191,7 +197,7 @@ nav ul li:hover{
 
 .card > .card-header{
     padding-bottom: 20px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--border-color);
     grid-column: span 2;
     width: 100%;
     text-align: center;
@@ -202,7 +208,7 @@ nav ul li:hover{
 .card-header > .membership-gold {
     text-align:center;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     background-color: black;
     color: white;
 }
@@ -310,7 +316,7 @@ nav ul li:hover{
 
 /** Forms **/
 form{
-    border: 2px dashed #ddd;
+    border: 2px dashed var(--border-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -350,8 +356,8 @@ fieldset > textarea {
 }
 
 form > input[type="submit"]{
-    border: 1px solid #ddd;
-    background-color:#ddd;
+    border: 1px solid var(--border-color);
+    background-color:var(--border-color);
     color: black;
     cursor:not-allowed;
     padding: 10px;
@@ -398,7 +404,7 @@ dialog {
 }
 
 .modal-header button{
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     border-radius: 5px;
     cursor: pointer;
     padding: 10px;
@@ -427,8 +433,8 @@ dialog {
 .info-card{
     width: 100%;
     margin-top: 15px;
-    border: 1px solid #ddd;
-    box-shadow: 0 5px 5px #ddd;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 5px 5px var(--border-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -509,7 +515,7 @@ footer{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     padding: 15px;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid var(--border-color);
     background-color: whitesmoke;
     gap: 20px;
 }
@@ -589,9 +595,9 @@ footer div span{
     flex-direction: column;
     justify-content: space-between;
     height:100%;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     box-sizing: border-box;
-    box-shadow: 0 5px 5px #ddd;
+    box-shadow: 0 5px 5px var(--border-color);
     padding: 10px;
     text-align: justify;
 }
