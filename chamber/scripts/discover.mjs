@@ -10,7 +10,7 @@ function RenderCards(places){
         `<div class="template-card">
             <h2>${venue.name}</h2>
             <figure>
-                <img src="${venue.src}" alt="picture of ${venue.name}" load="lazy" width="300" height="200">
+                <img src="${venue.src}" alt="picture of ${venue.name}" loading="lazy" width="300" height="200">
                 <figcaption>Picture of ${venue.name.toLowerCase()}<figcaption>
             </figure>
             <address>${venue.address}</address>
