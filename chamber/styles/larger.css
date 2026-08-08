@@ -34,6 +34,7 @@
     }
 
     nav ul li{
+        min-width: 90px;
         margin-bottom: 0;
     }
 
