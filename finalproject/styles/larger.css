@@ -49,15 +49,15 @@
     }
 
     .cards{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        align-items: start;
-        justify-content: center;
-        gap: 10px;
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .cards > h3{
-        grid-column: span 3;
+        grid-column: span 4;
+    }
+
+    .card.loading > figure{
+        height: 200px;
     }
 
     /** footer **/

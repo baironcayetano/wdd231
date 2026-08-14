@@ -1,0 +1,110 @@
+import API from "./API.mjs";
+
+const banner = document.querySelector(".banner");
+const trending = document.querySelector("#trending");
+const genres = document.querySelector("#genres"); 
+
+const movieGenres = await API.getGenres();
+
+//This limit will prevent doing more request than what is needed
+let movieGenresLimit = 10;
+let loadedGenres = 0;
+let firstTrendingRender = true;
+let firstGenreRender = true;
+
+//console.log(API.getRecommendedMovie(Movies.results));
+var movies = {};
+var trendingMovies = []; 
+
+async function loadTrendingMovies(){
+    const trending = await API.getTrendingMovies();
+    trendingMovies = trending.slice(0,4);
+    const recommended = API.getRecommendedMovie(trending);
+
+    renderBanner(recommended);
+    renderTrending(trendingMovies);
+}
+
+function renderBanner(movie){
+    const figure = document.createElement("figure");
+    const img = document.createElement("img");
+}
+
+function renderTrending(trendingMovies){
+    if(firstTrendingRender){
+        trending.innerHTML = "";
+        firstTrendingRender = false;
+    }
+
+    for(const movie of trendingMovies){
+        trending.appendChild(renderMovie(movie));
+    }
+}
+
+async function loadMovies(){
+    const genresToLoad = movieGenres.slice(loadedGenres,movieGenresLimit);
+    for (const genre of genresToLoad) {
+       movies[genre.name] = await API.getMoviesWithGn(genre.id);
+       renderGenre(genre.name,movies[genre.name]);
+    }
+    loadedGenres += 10;
+}
+
+function renderGenre(genreName, movies){
+    const h3 = document.createElement("h3");
+
+    if(firstGenreRender) {
+        genres.innerHTML = "";
+        firstGenreRender = false;
+    }
+
+    h3.textContent = genreName;
+    genres.appendChild(h3);
+
+    movies.slice(0,4).forEach((movie,i) => {
+        const movieElement = renderMovie(movie); 
+        genres.appendChild(movieElement);
+    });
+
+}
+
+function renderMovie(movie){
+    const a = document.createElement("a");
+    const figure = document.createElement("figure");
+    const img = document.createElement("img");
+    const pTitle = document.createElement("p");
+    const pLanguage = document.createElement("p");
+    const pRating = document.createElement("p");
+
+    a.classList.add("card");
+    a.href = `./details?movie=${movie.id}`;
+    a.ariaLabel = `See datails of ${movie.title}`;
+    a.title = `See dails of ${movie.title}`;
+    a.id = `${movie.id}`;
+
+    img.src = `https://image.tmdb.org/t/p/w185${movie.poster_path}`;
+    img.srcset = `
+        https://image.tmdb.org/t/p/w92${movie.poster_path} 92w,
+        https://image.tmdb.org/t/p/w154${movie.poster_path} 154w,
+        https://image.tmdb.org/t/p/w185${movie.poster_path} 185w`;
+    img.sizes = "(max-width: 767px) 33vw, 25vw";
+    img.alt = `${movie.title}`;
+
+    pTitle.textContent = movie.title;
+    pTitle.classList.add("card-title");
+    pLanguage.textContent = `Language: ${movie.original_language}`;
+    pRating.textContent = `${Number(movie.vote_average).toFixed(1)} / 10`;
+    pRating.classList.add("rating");
+
+    figure.appendChild(img);
+
+    a.appendChild(figure);
+    a.appendChild(pTitle);
+    a.appendChild(pLanguage);
+    a.appendChild(pRating);
+
+    return a;
+}
+
+loadTrendingMovies();
+loadMovies();

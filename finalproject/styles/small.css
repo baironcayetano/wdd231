@@ -99,16 +99,73 @@ nav{
 
 /** Content **/
 .banner > .loading{
-    height: 250px;
+    height: 20rem;
     width: 100%;
 }
 
 .cards{
-    display: block;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    justify-content: center;
+    gap:10px;
+    margin-bottom: 20px;
+}
+
+.cards > h3{
+        grid-column: span 2;
 }
 
 .cards > .card{
-    margin: 10px;
+    transition: transform 0.2 ease;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 5px 5px var(--border-color);
+    padding: 10px;
+    height: 35rem;
+}
+
+.card > p.rating{
+    text-align: center;
+    width: 80px;
+    background-color: var(--active-color);
+    font-weight: bolder;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.card > p{
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.card > figure{
+    margin: 0px;
+    height: auto;
+    display: block;
+}
+
+figure > img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+.card:hover{
+    transform: scale(1.02);
+    background-color: whitesmoke;
+}
+
+.card > figure.loading{
+    width: auto;
+    height: 20rem;
+}
+
+figure.loading > .img{
+    width: 100%;
+    height: 100%;
 }
 
 .more {
