@@ -12,7 +12,6 @@ let loadedGenres = 0;
 let firstTrendingRender = true;
 let firstGenreRender = true;
 
-//console.log(API.getRecommendedMovie(Movies.results));
 var movies = {};
 var trendingMovies = []; 
 
@@ -107,7 +106,7 @@ export function renderMovie(movie){
     const pRating = document.createElement("p");
 
     a.classList.add("card");
-    a.href = `./details?movie=${movie.id}`;
+    a.href = `./details.html?movie=${movie.id}`;
     a.ariaLabel = `See datails of ${movie.title}`;
     a.title = `See datails of ${movie.title}`;
 

@@ -5,6 +5,7 @@ const TMDB = {
         "genres":"https://api.themoviedb.org/3/genre/movie/list",
         "movieListByGn":"https://api.themoviedb.org/3/discover/movie",
         "find":"https://api.themoviedb.org/3/search/movie?language=en-Us",
+        "details":"https://api.themoviedb.org/3/movie/",
     }  
 };
 

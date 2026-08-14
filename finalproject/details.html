@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="./styles/larger.css">
 
     <script src="./scripts/layout.js" defer></script>
+    <script type="module" src="./scripts/details.mjs"></script>
 
     <title>Details | MovieTeatherApp</title>
 </head>
@@ -43,15 +44,21 @@
         </div>
         <nav id="nav-bar">
             <ul>
-                <li class="active"><a href="#">Home</a></li>
+                <li><a href="./index.html">Home</a></li>
                 <li><a href="./search.html">Search Movie</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1 class="loading"></h1>
-        <dialog id="modal"></dialog>
-        <div class="banner">
+        <h1>Details</h1>
+        <dialog id="modal">
+            <h2>Are you sure you want to <span id="action"></span> this movie?</h2>
+            <div class="modal-buttons">
+                <button id="close-modal-button" class="remove" type="button">Cancel</button>
+                <button id="confirm-modal-button" type="button">Accept</button>
+            </div>
+        </dialog>
+        <div class="banner" id="banner">
             <div class="loading"></div>
         </div>
         <div class="description">
