@@ -48,6 +48,14 @@
          height: 450px;
     }
 
+    .banner > .overlay{
+        display: none;
+    }
+
+    .banner:hover > .overlay{
+        display: flex;
+    }
+
     .cards{
         grid-template-columns: repeat(4, 1fr);
     }
@@ -56,7 +64,11 @@
         grid-column: span 4;
     }
 
-    .card.loading > figure{
+    .card {
+        height: 35rem;
+    }
+
+    .card > figure.loading{
         height: 200px;
     }
 

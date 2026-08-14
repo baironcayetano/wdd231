@@ -26,8 +26,37 @@ async function loadTrendingMovies(){
 }
 
 function renderBanner(movie){
+    const p = document.createElement("p");
     const figure = document.createElement("figure");
     const img = document.createElement("img");
+    const h2 = document.createElement("h2");
+    const a = document.createElement("a");
+
+    img.src = `https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`;
+    img.srcset = `
+    https://image.tmdb.org/t/p/w780${movie.backdrop_path} 780w,
+    https://image.tmdb.org/t/p/w1280${movie.backdrop_path} 1280w,
+    https://image.tmdb.org/t/p/original${movie.backdrop_path} 1920w`;
+    img.sizes = "100vw";
+    img.alt = `${movie.title}`;
+
+    a.classList.add("overlay");
+    h2.textContent = movie.title;
+
+    a.href = `./details?movie=${movie.id}`;
+    a.ariaLabel = `See datails of ${movie.title}`;
+    a.title = `See details of ${movie.title}`;
+
+    p.classList.add("banner-link");
+    p.textContent = "See details";
+
+    figure.appendChild(img);
+    a.appendChild(h2);
+    a.appendChild(p);
+
+    banner.textContent = "";
+    banner.appendChild(figure);
+    banner.appendChild(a);
 }
 
 function renderTrending(trendingMovies){
@@ -79,8 +108,7 @@ function renderMovie(movie){
     a.classList.add("card");
     a.href = `./details?movie=${movie.id}`;
     a.ariaLabel = `See datails of ${movie.title}`;
-    a.title = `See dails of ${movie.title}`;
-    a.id = `${movie.id}`;
+    a.title = `See datails of ${movie.title}`;
 
     img.src = `https://image.tmdb.org/t/p/w185${movie.poster_path}`;
     img.srcset = `
