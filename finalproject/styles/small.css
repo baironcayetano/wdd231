@@ -264,7 +264,7 @@ fieldset > input[type="submit"]{
 }
 
 .description{
-    margin: 20px 40px;
+    margin: 20px 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;

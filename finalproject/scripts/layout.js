@@ -5,3 +5,9 @@ navButton.addEventListener("click",()=>{
     navMenu.classList.toggle("show");
     navButton.classList.toggle("show");
 });
+
+const currentYearElement = document.getElementById("currentYear");
+
+//current date
+let today = new Date();
+currentYearElement.innerText =`${today.getFullYear()}`;
