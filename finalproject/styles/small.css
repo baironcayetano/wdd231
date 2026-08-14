@@ -1,6 +1,7 @@
 :root{
     --border-color:#ddd;
     --active-color:goldenrod;
+    --link-color:#3D405B;
     --footer-bgcolor:#2d2e33;
 }
 
@@ -104,6 +105,20 @@ nav{
 
 .cards > .card{
     margin: 10px;
+}
+
+.more {
+    border: 0;
+    background-color: transparent;
+    color:var(--link-color);
+}
+
+.description{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 /** Scheletons **/

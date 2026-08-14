@@ -4,9 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <meta name="author" content="Bairon Cayetano">
+    <meta name="description" content="Get to know about a movie. Learn about it and add to your favorites list">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Playfair+Display:ital@0;1&family=Playwrite+GB+J:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/small.css">
     <link rel="stylesheet" href="./styles/larger.css">
-    
+
+    <script src="./scripts/layout.js" defer></script>
+
     <title>Details | MovieTeatherApp</title>
 </head>
 <body>
@@ -23,7 +35,17 @@
             </ul>
         </nav>
     </header>
-    <main></main>
+    <main>
+        <h1 class="loading"></h1>
+        <dialog id="modal"></dialog>
+        <div class="banner">
+            <div class="loading"></div>
+        </div>
+        <div class="description">
+            <p class="loading" id="description"></p>
+            <button id="addToFavorites" disabled>Add to favorites</button>
+        </div>
+    </main>
     <footer>
         <h2>The MovieTheaterApp</h2>
         <p>This website has been built for the final project of the class WDD231 and it's not a commercial application</p>
