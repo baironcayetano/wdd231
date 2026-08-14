@@ -3,9 +3,6 @@ body{
     box-sizing: border-box;
 }
 
-main{
-    margin: 0 40px;
-}
 
 ul{
     list-style: none;

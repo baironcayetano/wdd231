@@ -1,4 +1,8 @@
 @media only screen and (min-width:48rem) {
+    body{
+        margin: 0 40px;    
+    }
+
      /** HEADER **/
     header{
         padding: 10px 40px;

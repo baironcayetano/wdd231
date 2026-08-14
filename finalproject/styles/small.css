@@ -5,6 +5,10 @@
     --footer-bgcolor:#2d2e33;
 }
 
+body{
+    margin: 0 15px;
+}
+
 /** HEADER **/
 header{
     padding: 10px;
