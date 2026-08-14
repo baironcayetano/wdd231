@@ -4,6 +4,7 @@ const TMDB = {
         "trendingMovies":"https://api.themoviedb.org/3/trending/movie/week?language=en-US",
         "genres":"https://api.themoviedb.org/3/genre/movie/list",
         "movieListByGn":"https://api.themoviedb.org/3/discover/movie",
+        "find":"https://api.themoviedb.org/3/search/movie?language=en-Us",
     }  
 };
 

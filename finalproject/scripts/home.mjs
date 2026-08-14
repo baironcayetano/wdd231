@@ -98,7 +98,7 @@ function renderGenre(genreName, movies){
 
 }
 
-function renderMovie(movie){
+export function renderMovie(movie){
     const a = document.createElement("a");
     const figure = document.createElement("figure");
     const img = document.createElement("img");

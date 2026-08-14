@@ -103,6 +103,10 @@ nav{
     width: 100%;
 }
 
+h2 {
+    font-size: 2rem;
+}
+
 .cards{
     box-sizing: border-box;
     display: grid;
@@ -113,8 +117,19 @@ nav{
     margin-bottom: 20px;
 }
 
+.cards > h3, .cards > h2{
+    grid-column: span 2;
+}
+
+
+.cards > h2{
+    text-align: center;
+    font-size: 2.5rem;
+}
+
 .cards > h3{
-        grid-column: span 2;
+    margin: 10px 5px;
+    font-size: 2rem;
 }
 
 .cards > .card{
@@ -122,7 +137,7 @@ nav{
     border: 1px solid var(--border-color);
     box-shadow: 0 5px 5px var(--border-color);
     padding: 10px;
-    min-height: 28rem;
+    min-height: 29rem;
 }
 
 .card > p.rating{
@@ -201,6 +216,45 @@ figure.loading > .img{
     text-align: center;
     width: 120px;
     border-radius: 5px;
+}
+
+fieldset{
+    border: 0px;
+    margin:20px 0;
+    padding-inline: 0;
+    margin-inline: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+fieldset > legend{
+    font-size: 3rem;
+    text-align: center;
+}
+
+fieldset > input[type="text"]{
+    border:1px solid var(--border-color);
+    border-radius: 5px;
+    width: 80%;
+    font-size: 2rem;
+    text-align: center;
+    padding: 5px;
+}
+
+fieldset > input[type="submit"]{
+    font-size: 2rem;
+    text-align: center;
+    padding: 5px;
+    width: 250px;
+    border-radius: 10px;
+    border: 1px solid var(--active-color);
+    background-color: var(--active-color);
+    color: black;
+    cursor: pointer;
 }
 
 .more {

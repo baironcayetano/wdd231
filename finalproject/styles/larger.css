@@ -60,7 +60,7 @@
         grid-template-columns: repeat(4, 1fr);
     }
 
-    .cards > h3{
+    .cards > h3, .cards >h2{
         grid-column: span 4;
     }
 

@@ -69,6 +69,24 @@ class API {
             return [];
         }
     }
+
+    static async findMovie(movieName){
+        try {
+            let response =  await fetch(`${TMDB.URL.find}&query=${movieName}`, this.fetchConfig);
+            
+            if (!response.ok) throw new Error(`Error ${response.status}: ${response.statusText}`);
+            
+            let data = await response.json();
+
+            if(!data.results) console.error("The response has no results",data)
+            return data.results;
+
+        } catch (error) {
+            if(error.name === "AbortError") console.error("The response took too long and was cancelled");
+            else console.error("Error trying to find the movie", error.message);
+            return [];
+        }
+    }
 }
 
 
