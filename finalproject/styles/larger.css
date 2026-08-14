@@ -1,0 +1,54 @@
+@media only screen and (min-width:48rem) {
+     /** HEADER **/
+    header{
+        padding: 10px 40px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .header-title{
+        padding: 0px;
+        font-size: 20px;
+        justify-content: start; 
+    }
+
+    .hamburger{
+        display: none;
+    }
+    
+    nav{
+        border-top: 0px;
+        margin-top: 0px;
+    }
+
+    #nav-bar ul{
+        font-size: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        justify-content: right;
+    }
+
+    nav ul li{
+        padding: 0px;
+        min-width: 90px;
+        margin-bottom: 0;
+    }
+
+    #nav-bar, #nav-bar.show{
+        display: block;
+    }
+
+    /** footer **/
+    footer{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: start;
+        justify-content:center;
+    }
+
+    footer > p, footer > h2{
+        grid-column: span 3;
+    }
+
+}

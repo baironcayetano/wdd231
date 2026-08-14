@@ -1,0 +1,126 @@
+:root{
+    --border-color:#ddd;
+    --active-color:goldenrod;
+    --footer-bgcolor:#2d2e33;
+}
+
+/** HEADER **/
+header{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-title{
+    padding: 15px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;  
+    gap: 10px;
+}
+
+.header-title img{
+    width: 36px;
+    height: auto;
+}
+
+nav{
+   border-top: 1px solid var(--border-color);
+   margin-top: 10px;
+   width: 100%; 
+}
+
+#nav-bar ul li{
+    margin-bottom: 5px;
+}
+
+#nav-bar ul li a{
+    color: black;
+}
+
+#nav-bar ul li.active{
+    border: 2px solid var(--active-color);
+    border-radius: 5px;
+}
+
+/** BACKGROUND COLOR FOR HOVER **/
+#nav-bar ul li:hover{
+    cursor: pointer;
+    background-color: whitesmoke;
+}
+
+#nav-bar{
+    display: none;
+}
+
+#nav-bar.show{
+    display: block;
+}
+
+/** HAMBURGER BUTTON**/
+.hamburger{
+    background: none;
+    border:none;
+    color:#3D405B;
+    cursor:pointer;
+    touch-action: manipulation;
+
+    min-width: 44px;
+    min-height: 44px;
+    padding: 8px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+.hamburger::after{
+    content:"\2630";
+    font-size:2rem;
+    line-height: 1;
+}
+
+.hamburger.show::after{
+    content:"\00D7";
+}
+
+/** Footer **/
+footer{
+    display: block;
+    background-color:var(--footer-bgcolor);
+    color: gainsboro;
+    padding: 10px 40px;
+}
+
+
+
+.footer-content{
+    display: block;
+}
+
+#project-info{
+    grid-column: span 2;
+}
+
+footer > h2, .footer-content > h3 {
+    color: var(--active-color);
+}
+
+footer > p, .footer-content > p{
+    font-size: 16px;
+}
+
+#social-media{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}

@@ -3,9 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./styles/small.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+    
     <title>Details | MovieTeatherApp</title>
 </head>
 <body>
-    
+    <header>
+         <div class="header-title">
+            <img src="./images/nav-icon.svg" alt="site logo" width="40" height="40">
+            <span>MovieTheatherApp</span>
+            <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+        </div>
+        <nav id="nav-bar">
+            <ul>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="./search.html">Search Movie</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main></main>
+    <footer>
+        <h2>The MovieTheaterApp</h2>
+        <p>This website has been built for the final project of the class WDD231 and it's not a commercial application</p>
+        <div class="footer-content" id="project-info">
+            <h3>Project Information</h3>
+            <p>WDD231 Web Frontend Development 1 - Bairon Cayetano</p>
+            <p>API - TMDB&copy; API</p>
+            <p>Core Technologies: Javascript, CSS and HTML5</p>
+            <p>Final Project</p>
+        </div>
+        <div class="footer-content">
+            <h3>Contact</h3>
+               <ul aria-label="social media links" id="social-media">
+                <li>
+                    <a href="https://github.com/baironcayetano">
+                        <img src="./images/github.svg" alt="github logo" width="32" height="32">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/bairon-spenser-c-a97009250">
+                        <img src="./images/linkedin.svg" alt="linkedin logo" width="32" height="32">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/spenser.cayetano25">
+                        <img src="./images/facebook.svg" alt="facebook logo" width="32" height="32">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <p>Bairon Cayetano &copy; <span id="currentYear"></span> - Tegucigalpa, Honduras </p>
+    </footer>
 </body>
 </html>

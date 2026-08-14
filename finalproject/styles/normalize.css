@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main{
+    margin: 0 40px;
+}
+
+ul{
+    list-style: none;
+    margin-block: 0px;
+    padding-inline-start: 0px;
+}
+
+ul li{
+    text-align: center;
+}
+
+li a{
+    padding: 15px 5px;
+    display: block;
+    height: 100%;
+}
+
+a{
+    text-decoration: none;
+}
