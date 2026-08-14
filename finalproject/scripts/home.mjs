@@ -39,11 +39,12 @@ function renderBanner(movie){
     https://image.tmdb.org/t/p/original${movie.backdrop_path} 1920w`;
     img.sizes = "100vw";
     img.alt = `${movie.title}`;
+    img.loading = "lazy";
 
     a.classList.add("overlay");
     h2.textContent = movie.title;
 
-    a.href = `./details?movie=${movie.id}`;
+    a.href = `./details.html?movie=${movie.id}`;
     a.ariaLabel = `See datails of ${movie.title}`;
     a.title = `See details of ${movie.title}`;
 
@@ -117,6 +118,7 @@ function renderMovie(movie){
         https://image.tmdb.org/t/p/w185${movie.poster_path} 185w`;
     img.sizes = "(max-width: 767px) 33vw, 25vw";
     img.alt = `${movie.title}`;
+    img.loading = "lazy";
 
     pTitle.textContent = movie.title;
     pTitle.classList.add("card-title");
