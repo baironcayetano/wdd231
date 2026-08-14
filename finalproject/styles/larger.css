@@ -39,6 +39,23 @@
         display: block;
     }
 
+    /** Content **/
+    .banner > .loading{
+         height: 450px;
+    }
+
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: start;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .cards > h3{
+        grid-column: span 3;
+    }
+
     /** footer **/
     footer{
         display: grid;

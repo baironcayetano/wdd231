@@ -92,6 +92,35 @@ nav{
     content:"\00D7";
 }
 
+/** Content **/
+.banner > .loading{
+    height: 250px;
+    width: 100%;
+}
+
+.cards{
+    display: block;
+}
+
+.cards > .card{
+    margin: 10px;
+}
+
+/** Scheletons **/
+.loading{
+  width: 100%;
+  height: 20px;
+  border-radius: 4px;
+  background: linear-gradient(
+    90deg,
+    #e0e0e0 25%,
+    #f0f0f0 50%,
+    #e0e0e0 75%
+  );
+  background-size: 200% 100%;
+  animation: loading 2.5s ease-in-out infinite;
+}
+
 /** Footer **/
 footer{
     display: block;
@@ -99,8 +128,6 @@ footer{
     color: gainsboro;
     padding: 10px 40px;
 }
-
-
 
 .footer-content{
     display: block;
@@ -123,4 +150,14 @@ footer > p, .footer-content > p{
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+}
+
+/** Animations **/
+@keyframes loading{
+    0%{
+        background-position: 200% 0;
+    }
+    100%{
+        background-position: -200% 0;
+    }
 }
