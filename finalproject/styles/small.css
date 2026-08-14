@@ -266,7 +266,7 @@ fieldset > input[type="submit"]{
 .description{
     margin: 20px 0;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     align-items: center;
     justify-content: space-around;
     font-size: 20px;
