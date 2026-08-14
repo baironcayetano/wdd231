@@ -133,7 +133,7 @@ h2 {
 }
 
 .cards > .card{
-    transition: transform 0.2 ease;
+    transition: transform 0.2s ease;
     border: 1px solid var(--border-color);
     box-shadow: 0 5px 5px var(--border-color);
     padding: 10px;
